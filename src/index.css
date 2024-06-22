@@ -69,6 +69,7 @@ body {
 }
 
 .back-button {
+  font-size: clamp(1.2rem, 4.5vmin, 2rem);
   transition: 0.1s all;
 }
 
@@ -121,8 +122,9 @@ body {
   width: fit-content;
 }
 
+.about-explanation,
 .image-explanation {
-  font-size: clamp(0.6rem, 1vw + 0.25rem, 1rem);
+  font-size: clamp(0.62rem, 1vw + 0.25rem, 1rem);
 }
 
 .image-info-text {

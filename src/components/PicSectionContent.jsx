@@ -42,7 +42,7 @@ const PicSectionContent = ({ imageData }) => {
             </div>
 
             <div className='w-full overflow-y-scroll explanationBox'>
-                <p className='text-white image-explanation pr-2'>{imageData.explanation}</p>
+                <p className='text-white image-explanation pr-2 text-justify'>{imageData.explanation}</p>
             </div>
 
             <div className='w-full mt-auto flex items-center justify-center p-1'>

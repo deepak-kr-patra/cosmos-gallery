@@ -20,7 +20,7 @@ const Card = () => {
                 <img src="https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2022/11/Hubble-Pillars-of-Creation.jpg?resize=1500%2C1565&ssl=1" alt="Shoes" className="w-full h-full rounded-md object-cover" />
             </div>
             <div className={`${itemsWidth} flex-grow flex flex-col items-center justify-center gap-2 p-2`}>
-                <h4 className='text-white section-info-text'>View Pic Of The Day</h4>
+                <h4 className='text-white section-info-text'>View spectacular pictures</h4>
                 <Link to="/explore/potd"><button className="btn rounded-3xl apod-button">click!</button></Link>
             </div>
         </div>
