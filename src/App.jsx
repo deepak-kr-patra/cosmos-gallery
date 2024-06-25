@@ -1,13 +1,16 @@
-import { useReducer } from 'react'
+import { useReducer, useState } from 'react'
+import {
+  Routes,
+  Route,
+  Navigate,
+  HashRouter,
+} from "react-router-dom";
+
 import './App.css'
 import Explore from './pages/Explore'
 import Home from './pages/Home'
+
 import useScreenWidth from './zustand/useScreenWidth'
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
 import { Toaster } from 'react-hot-toast';
 
 
@@ -21,14 +24,17 @@ function App() {
     forceUpdate();
   };
 
+  // variable to check if explore page is visited or not
+  const [visited, setVisited] = useState(false);
+
   return (
     <div className='wrapper'>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="explore/*" element={<Explore />} />
+          <Route path="/" element={<Home setVisited={setVisited} />} />
+          <Route path="explore/*" element={!visited ? <Navigate to={"/"} /> : <Explore />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
       <Toaster />
     </div>
   )
