@@ -4,6 +4,7 @@ import {
   Routes,
   Route,
   Navigate,
+  HashRouter,
 } from "react-router-dom";
 
 import './App.css'
@@ -30,10 +31,12 @@ function App() {
   return (
     <div className='wrapper'>
       {/* <BrowserRouter> */}
-      <Routes>
-        <Route path="/" element={<Home setVisited={setVisited} />} />
-        <Route path="explore/*" element={!visited ? <Navigate to={"/"} /> : <Explore />} />
-      </Routes>
+      <HashRouter>
+        <Routes>
+          <Route path="/" element={<Home setVisited={setVisited} />} />
+          <Route path="explore/*" element={!visited ? <Navigate to={"/"} /> : <Explore />} />
+        </Routes>
+      </HashRouter>
       {/* </BrowserRouter> */}
       <Toaster />
     </div>
