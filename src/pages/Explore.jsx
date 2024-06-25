@@ -13,10 +13,10 @@ import { IoArrowBack } from "react-icons/io5";
 
 
 const Explore = () => {
-    
+
     const navigate = useNavigate();
     const { pathname } = useLocation();
-    
+
     const goBack = () => {
         if (pathname === '/explore') {
             navigate('/');
