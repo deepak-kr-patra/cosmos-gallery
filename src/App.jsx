@@ -1,6 +1,5 @@
 import { useReducer, useState } from 'react'
 import {
-  // BrowserRouter,
   Routes,
   Route,
   Navigate,
@@ -30,14 +29,12 @@ function App() {
 
   return (
     <div className='wrapper'>
-      {/* <BrowserRouter> */}
       <HashRouter>
         <Routes>
           <Route path="/" element={<Home setVisited={setVisited} />} />
           <Route path="explore/*" element={!visited ? <Navigate to={"/"} /> : <Explore />} />
         </Routes>
       </HashRouter>
-      {/* </BrowserRouter> */}
       <Toaster />
     </div>
   )
