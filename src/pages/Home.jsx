@@ -3,7 +3,7 @@ import '../styling/home.css'
 import { Link } from 'react-router-dom';
 
 
-const Home = ({ setVisited }) => {
+const Home = () => {
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -29,10 +29,6 @@ const Home = ({ setVisited }) => {
         hiddenItems.forEach((el) => observer2.observe(el));
     }, []);
 
-    const handleClick = () => {
-        setVisited(true);
-    }
-
     return (
         <div className='text-white w-full h-screen flex flex-col items-center justify-center'>
             <div className="w-full relative flex items-center justify-center overflow-hidden">
@@ -56,7 +52,7 @@ const Home = ({ setVisited }) => {
 
             <div className="max-w-mddd w-full flex flex-col items-center justify-center text-center p-4 gap-4">
                 <p className="intro-n-btn home-text">The place for beautiful pictures of the cosmos.</p>
-                <Link to="/explore" className='intro-n-btn'><button className="btn rounded-3xl apod-button" onClick={() => handleClick()}>Explore</button></Link>
+                <Link to="/explore" className='intro-n-btn'><button className="btn rounded-3xl apod-button">Explore</button></Link>
             </div>
         </div>
     )

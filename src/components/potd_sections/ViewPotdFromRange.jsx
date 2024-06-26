@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import usePicsParameters from '../../zustand/usePicsParameters'
 import toast from 'react-hot-toast';
 import validDate from '../../utilities/validDate';
@@ -9,6 +9,7 @@ import validDateRange from '../../utilities/validDateRange';
 const ViewPotdFromRange = ({ width }) => {
 
     const { setStartDate, setEndDate } = usePicsParameters();
+    const navigate = useNavigate();
 
     const setDates = () => {
         setStartDate(null);
@@ -42,6 +43,11 @@ const ViewPotdFromRange = ({ width }) => {
 
         setStartDate(inputStartDate);
         setEndDate(inputEndDate);
+
+        localStorage.setItem("start-date", inputStartDate);
+        localStorage.setItem("end-date", inputEndDate);
+
+        navigate('/explore/potd/pics-from-range');
     }
 
     return (
@@ -59,7 +65,7 @@ const ViewPotdFromRange = ({ width }) => {
                     <input type="date" className="grow" id='endDate' />
                 </label>
             </div>
-            <Link to="/explore/potd/pics-from-range" onClick={() => setDates()}><button className="btn rounded-3xl apod-button">View Pictures</button></Link>
+            <button className="btn rounded-3xl apod-button" onClick={() => setDates()}>View Pictures</button>
         </div>
     )
 }

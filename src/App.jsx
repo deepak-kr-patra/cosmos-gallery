@@ -24,15 +24,12 @@ function App() {
     forceUpdate();
   };
 
-  // variable to check if explore page is visited or not
-  const [visited, setVisited] = useState(false);
-
   return (
     <div className='wrapper'>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home setVisited={setVisited} />} />
-          <Route path="explore/*" element={!visited ? <Navigate to={"/"} /> : <Explore />} />
+          <Route path="/" element={<Home />} />
+          <Route path="explore/*" element={<Explore />} />
         </Routes>
       </BrowserRouter>
       <Toaster />
