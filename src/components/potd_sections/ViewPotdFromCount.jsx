@@ -1,12 +1,13 @@
 import React from 'react'
 import usePicsParameters from '../../zustand/usePicsParameters';
 import toast from 'react-hot-toast';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 const ViewPotdFromCount = ({ width }) => {
 
     const { setCount } = usePicsParameters();
+    const navigate = useNavigate();
 
     const setCountValue = () => {
         setCount(0);
@@ -16,14 +17,17 @@ const ViewPotdFromCount = ({ width }) => {
             toast.error(`Enter a number from 1 to 100`);
             return;
         }
+
         setCount(value);
+        localStorage.setItem("count", value);
+        navigate('/explore/potd/pics-from-count');
     }
 
     return (
         <div className={`${width} h-full flex flex-col items-center justify-center gap-3 bg-[#312165] rounded-md`}>
             <label htmlFor="count" className='text-white pl-2 section-info-text'>Choose number of pics (1 - 100)</label>
             <input type="number" placeholder="Type here" className="input h-[2.5rem] input-bordered w-1/2 max-w-xs my-input" id='count' />
-            <Link to="/explore/potd/pics-from-count" onClick={() => setCountValue()}><button className="btn rounded-3xl apod-button">View Pictures</button></Link>
+            <button className="btn rounded-3xl apod-button" onClick={() => setCountValue()}>View Pictures</button>
         </div>
     )
 }

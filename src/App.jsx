@@ -3,7 +3,7 @@ import {
   Routes,
   Route,
   Navigate,
-  HashRouter,
+  BrowserRouter,
 } from "react-router-dom";
 
 import './App.css'
@@ -24,17 +24,14 @@ function App() {
     forceUpdate();
   };
 
-  // variable to check if explore page is visited or not
-  const [visited, setVisited] = useState(false);
-
   return (
     <div className='wrapper'>
-      <HashRouter>
+      <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home setVisited={setVisited} />} />
-          <Route path="explore/*" element={!visited ? <Navigate to={"/"} /> : <Explore />} />
+          <Route path="/" element={<Home />} />
+          <Route path="explore/*" element={<Explore />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
       <Toaster />
     </div>
   )
