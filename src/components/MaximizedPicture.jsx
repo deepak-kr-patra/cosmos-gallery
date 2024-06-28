@@ -25,7 +25,7 @@ const MaximizedPicture = () => {
             }
         }
         maximizeImage();
-    }, [maximizedPicURL, window.innerWidth, window.innerHeight]);
+    });
 
     const maximizedPic = document.getElementById('maximizedPic');
 
