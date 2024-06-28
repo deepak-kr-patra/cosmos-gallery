@@ -25,21 +25,21 @@ const MaximizedPicture = () => {
             }
         }
         maximizeImage();
-    })
+    }, [maximizedPicURL, window.innerWidth, window.innerHeight]);
 
     const maximizedPic = document.getElementById('maximizedPic');
 
-    const hidedMaximizedPic = () => {
+    const hideMaximizedPic = () => {
         maximizedPic.classList.contains('showMaximizedPic') ? maximizedPic.classList.remove('showMaximizedPic') : maximizedPic.classList.add('showMaximizedPic');
     }
 
     return (
         <>
-            <div className='maximizedPic' id='maximizedPic' onClick={() => hidedMaximizedPic()}>
+            <div className='maximizedPic' id='maximizedPic' onClick={() => hideMaximizedPic()}>
                 <div className='absolute top-0 right-0 p-4'>
                     <button className='text-white text-2xl'><IoClose /></button>
                 </div>
-                <img id="selectedImage" src={maximizedPicURL} alt="Maximized Image" onClick={() => hidedMaximizedPic()} />
+                <img id="selectedImage" src={maximizedPicURL} alt="Maximized Image" onClick={() => hideMaximizedPic()} />
             </div>
         </>
     )

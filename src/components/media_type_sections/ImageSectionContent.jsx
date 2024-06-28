@@ -10,9 +10,9 @@ const ImageSectionContent = ({ imageData }) => {
     const { setMaximizedPicURL } = usePicsParameters();
     const { screenWidth } = useScreenWidth();
 
-    const maximizedPic = document.getElementById('maximizedPic');
-
     const showMaximizedPic = () => {
+        const maximizedPic = document.getElementById('maximizedPic');
+
         setMaximizedPicURL(imageData.url);
         maximizedPic.classList.add('showMaximizedPic');
     }
