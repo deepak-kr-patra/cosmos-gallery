@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
-import PicSlide from './PicSlide';
-import useGetImagesFromCount from '../hooks/useGetImagesFromCount';
-import MaximizedPicture from './MaximizedPicture';
-import Loader from './Loader';
 import { useNavigate } from 'react-router-dom';
+import Loader from './Loader';
+import PicSlide from './PicSlide';
+import MaximizedPicture from './MaximizedPicture';
+import useGetImagesFromCount from '../hooks/useGetImagesFromCount';
 
 
 const PicsFromCount = () => {
