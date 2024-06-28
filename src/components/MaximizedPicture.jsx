@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
-import { IoClose } from "react-icons/io5";
 import usePicsParameters from '../zustand/usePicsParameters';
+import { IoClose } from "react-icons/io5";
 
 
 const MaximizedPicture = () => {

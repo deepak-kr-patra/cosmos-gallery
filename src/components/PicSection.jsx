@@ -1,9 +1,9 @@
 import React from 'react'
-import useGetImage from '../hooks/useGetImage'
-import PicSectionContent from './PicSectionContent';
-import MaximizedPicture from './MaximizedPicture';
 import Loader from './Loader';
 import NotAvailable from './NotAvailable';
+import MaximizedPicture from './MaximizedPicture';
+import PicSectionContent from './PicSectionContent';
+import useGetImage from '../hooks/useGetImage'
 
 
 const PicSection = () => {
