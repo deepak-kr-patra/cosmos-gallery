@@ -122,6 +122,12 @@ body {
   width: fit-content;
 }
 
+.carousel-number {
+  font-size: clamp(0.6rem, 1vw + 0.2rem, 0.9rem);
+  line-height: 1;
+  width: fit-content;
+}
+
 .about-explanation,
 .image-explanation {
   font-size: clamp(0.62rem, 1vw + 0.25rem, 1rem);
@@ -173,7 +179,7 @@ body {
   z-index: 1;
   height: 100%;
   width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
+  background: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95));
   visibility: hidden;
   display: flex;
   align-items: center;

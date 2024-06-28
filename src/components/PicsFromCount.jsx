@@ -29,6 +29,8 @@ const PicsFromCount = () => {
                         {imagesData.map((singleImageData, idx) => {
                             return <PicSlide
                                 key={idx}
+                                slideNumber={idx+1}
+                                totalItems={imagesData.length}
                                 singleImageData={singleImageData}
                             />
                         })}

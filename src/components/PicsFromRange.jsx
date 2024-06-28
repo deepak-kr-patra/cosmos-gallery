@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
-import PicSlide from './PicSlide';
-import useGetImagesFromRange from '../hooks/useGetImagesFromRange'
-import MaximizedPicture from './MaximizedPicture';
-import Loader from './Loader';
 import { useNavigate } from 'react-router-dom';
+import Loader from './Loader';
+import PicSlide from './PicSlide';
+import MaximizedPicture from './MaximizedPicture';
+import useGetImagesFromRange from '../hooks/useGetImagesFromRange'
 
 
 const PicsFromRange = () => {
@@ -30,6 +30,8 @@ const PicsFromRange = () => {
                         {imagesData.map((singleImageData, idx) => {
                             return <PicSlide
                                 key={idx}
+                                slideNumber={idx+1}
+                                totalItems={imagesData.length}
                                 singleImageData={singleImageData}
                             />
                         })}

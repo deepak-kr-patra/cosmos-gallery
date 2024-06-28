@@ -17,7 +17,7 @@ const Card = () => {
     return (
         <div className={`w-full ${height} flex ${flexDir} items-center ${justification} bg-[#312165] rounded-md my-card`}>
             <div className={`${itemsWidth} ${itemsHeight} p-2`}>
-                <img src="https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2022/11/Hubble-Pillars-of-Creation.jpg?resize=1500%2C1565&ssl=1" alt="Shoes" className="w-full h-full rounded-md object-cover" />
+                <img src="/pillarsOfCreation.jpg" alt="Pillars Of Creation Nebula" className="w-full h-full rounded-md object-cover" />
             </div>
             <div className={`${itemsWidth} flex-grow flex flex-col items-center justify-center gap-2 p-2`}>
                 <h4 className='text-white section-info-text'>View spectacular pictures</h4>
