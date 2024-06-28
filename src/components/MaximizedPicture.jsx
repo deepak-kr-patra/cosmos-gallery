@@ -7,7 +7,7 @@ const MaximizedPicture = () => {
 
     const { maximizedPicURL } = usePicsParameters();
 
-    // to fit the image according to screen initially
+    // to fit the image according to screen
     useEffect(() => {
         const maximizeImage = () => {
             const img = document.getElementById('selectedImage');
@@ -26,26 +26,6 @@ const MaximizedPicture = () => {
         }
         maximizeImage();
     });
-
-    // to fit the image according to screen upon changes in specified values
-    useEffect(() => {
-        const maximizeImage = () => {
-            const img = document.getElementById('selectedImage');
-            const screenAspectRatio = window.innerWidth / window.innerHeight;
-            const imgAspectRatio = img.naturalWidth / img.naturalHeight;
-
-            if (imgAspectRatio > screenAspectRatio) {
-                // Fit by width
-                img.style.width = '100%';
-                img.style.height = 'auto';
-            } else {
-                // Fit by height
-                img.style.width = 'auto';
-                img.style.height = '100%';
-            }
-        }
-        maximizeImage();
-    }, [maximizedPicURL, window.innerWidth, window.innerHeight]);
 
     const maximizedPic = document.getElementById('maximizedPic');
 
