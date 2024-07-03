@@ -1,4 +1,3 @@
-import { useReducer } from 'react'
 import {
   Routes,
   Route,
@@ -16,11 +15,9 @@ import { Toaster } from 'react-hot-toast';
 function App() {
 
   const { setScreenWidth } = useScreenWidth();
-  const [_, forceUpdate] = useReducer(x => x + 1, 0);
 
   window.onresize = function () {
     setScreenWidth(window.innerWidth);
-    forceUpdate();
   };
 
   return (
