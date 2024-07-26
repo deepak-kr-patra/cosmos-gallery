@@ -27,7 +27,6 @@ const ExploreContent = () => {
             {/* bottom half */}
             <div className={`w-full h-[60%] flex ${flexDir} items-center justify-evenly gap-4`}>
                 <Card />
-                {/* <Card /> */}
             </div>
         </>
     )
