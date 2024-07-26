@@ -64,7 +64,7 @@ body {
 }
 
 .my-card:hover {
-  scale: 1.05;
+  scale: 1.02;
   cursor: pointer;
 }
 
@@ -128,9 +128,12 @@ body {
   width: fit-content;
 }
 
-.about-explanation,
-.image-explanation {
+.about-explanation {
   font-size: clamp(0.62rem, 1vw + 0.25rem, 1rem);
+}
+
+.image-explanation {
+  font-size: clamp(0.64rem, 1vw + 0.25rem, 1rem);
 }
 
 .image-info-text {
