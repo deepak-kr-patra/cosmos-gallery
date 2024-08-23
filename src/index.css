@@ -64,7 +64,7 @@ body {
 }
 
 .my-card:hover {
-  scale: 1.05;
+  scale: 1.02;
   cursor: pointer;
 }
 
@@ -122,9 +122,18 @@ body {
   width: fit-content;
 }
 
-.about-explanation,
-.image-explanation {
+.carousel-number {
+  font-size: clamp(0.6rem, 1vw + 0.2rem, 0.9rem);
+  line-height: 1;
+  width: fit-content;
+}
+
+.about-explanation {
   font-size: clamp(0.62rem, 1vw + 0.25rem, 1rem);
+}
+
+.image-explanation {
+  font-size: clamp(0.64rem, 1vw + 0.25rem, 1rem);
 }
 
 .image-info-text {
@@ -173,7 +182,7 @@ body {
   z-index: 1;
   height: 100%;
   width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
   visibility: hidden;
   display: flex;
   align-items: center;

@@ -30,7 +30,7 @@ const Explore = () => {
     const { screenWidth } = useScreenWidth();
 
     const boxWidth = screenWidth > 1100 ? "w-[60%]" : screenWidth <= 1100 && screenWidth > 500 ? "w-[80%]" : "w-[90%]";
-    const padding = screenWidth < 500 ? "p-4" : "p-8";
+    const padding = screenWidth < 500 ? "p-4" : "p-6";
 
     return (
         <div className='h-full w-full bg-gray-400 rounded-none bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0 flex items-center justify-center

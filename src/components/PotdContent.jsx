@@ -7,6 +7,7 @@ import useScreenWidth from '../zustand/useScreenWidth'
 
 const PotdContent = () => {
 
+    localStorage.clear();
     const { screenWidth } = useScreenWidth();
 
     return (

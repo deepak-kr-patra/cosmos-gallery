@@ -8,7 +8,7 @@ const useGetImage = (date) => {
     const [imageData, setImageData] = useState([]);
 
     let urlDate = "";
-    if (date && date !== "today") {
+    if (date) {
         urlDate = `&date=${date}`;
     }
 

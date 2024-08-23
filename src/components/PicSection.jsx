@@ -1,12 +1,14 @@
 import React from 'react'
-import useGetImage from '../hooks/useGetImage'
-import PicSectionContent from './PicSectionContent';
-import MaximizedPicture from './MaximizedPicture';
 import Loader from './Loader';
 import NotAvailable from './NotAvailable';
+import MaximizedPicture from './MaximizedPicture';
+import PicSectionContent from './PicSectionContent';
+import useGetImage from '../hooks/useGetImage'
 
 
-const PicSection = ({ date }) => {
+const PicSection = () => {
+
+    let date = localStorage.getItem("date") || null;
 
     const { imageData, loading } = useGetImage(date);
     console.log(imageData);
