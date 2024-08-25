@@ -1,7 +1,7 @@
 import {
   Routes,
   Route,
-  BrowserRouter,
+  HashRouter,
 } from "react-router-dom";
 
 import './App.css'
@@ -22,12 +22,12 @@ function App() {
 
   return (
     <div className='wrapper'>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="explore/*" element={<Explore />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
       <Toaster />
     </div>
   )
