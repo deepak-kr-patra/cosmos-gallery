@@ -13,8 +13,8 @@ const ViewPotdFromCount = ({ width }) => {
         setCount(0);
 
         const value = document.getElementById('count').value;
-        if (value < 1 || value > 100) {
-            toast.error(`Enter a number from 1 to 100`);
+        if (value < 1 || value > 20) {
+            toast.error(`Enter a number from 1 to 20`);
             return;
         }
 
@@ -25,7 +25,7 @@ const ViewPotdFromCount = ({ width }) => {
 
     return (
         <div className={`${width} h-full flex flex-col items-center justify-center gap-3 bg-[#312165] rounded-md`}>
-            <label htmlFor="count" className='text-white pl-2 section-info-text'>Choose number of pics (1 - 100)</label>
+            <label htmlFor="count" className='text-white pl-2 section-info-text'>Choose number of pics (1 - 20)</label>
             <input type="number" placeholder="Type here" className="input h-[2.5rem] input-bordered w-1/2 max-w-xs my-input" id='count' />
             <button className="btn rounded-3xl apod-button" onClick={() => setCountValue()}>View Pictures</button>
         </div>
