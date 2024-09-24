@@ -11,7 +11,6 @@ const PicSection = () => {
     let date = localStorage.getItem("date") || null;
 
     const { imageData, loading } = useGetImage(date);
-    console.log(imageData);
 
     return (
         <>

@@ -27,8 +27,6 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  /* height: 100%;
-  width: 100vw; */
   overflow-y: scroll;
   scroll-behavior: smooth;
   background: linear-gradient(rgba(35, 48, 55, 0.4), rgba(35, 48, 55, 0.4)), url('/earth-from-space.jpeg');
@@ -92,23 +90,21 @@ body {
   width: fit-content;
 }
 
-.explanationBox::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 0;
 }
 
-.explanationBox::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: #312165;
   border-radius: 6px;
 }
 
-.explanationBox::-webkit-scrollbar-thumb {
-  background-color: #444;
+::-webkit-scrollbar-thumb {
   background: linear-gradient(#ff00d9, #00e3f7);
   border-radius: 6px;
 }
 
-.explanationBox::-webkit-scrollbar-thumb:hover {
-  background-color: black;
+::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(#00e3f7, #ff00d9);
 }
 
