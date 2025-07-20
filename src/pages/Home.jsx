@@ -33,11 +33,12 @@ const Home = () => {
         <div className='text-white w-full h-screen flex flex-col items-center justify-center'>
             <div className="w-full relative flex items-center justify-center overflow-hidden">
                 <h1 className='text-[6vmin]'>
-                    <span className="alphabet">S</span>
-                    <span className="alphabet">P</span>
-                    <span className="alphabet">A</span>
                     <span className="alphabet">C</span>
-                    <span className="alphabet">E</span>
+                    <span className="alphabet">O</span>
+                    <span className="alphabet">S</span>
+                    <span className="alphabet">M</span>
+                    <span className="alphabet">O</span>
+                    <span className="alphabet">S</span>
                     <span className="alphabet"> </span>
                     <span className="alphabet">G</span>
                     <span className="alphabet">A</span>

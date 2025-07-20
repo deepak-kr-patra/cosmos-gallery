@@ -78,6 +78,10 @@
     transition-delay: 1800ms;
 }
 
+.alphabet:nth-child(14) {
+    transition-delay: 1850ms;
+}
+
 .intro-n-btn {
     opacity: 0;
     scale: 0;
