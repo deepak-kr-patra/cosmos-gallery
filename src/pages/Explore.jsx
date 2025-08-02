@@ -1,4 +1,3 @@
-import React from 'react'
 import {
     Routes,
     Route,
@@ -37,7 +36,7 @@ const Explore = () => {
         '>
             <div className={`relative ${boxWidth} h-[90%] flex flex-col items-center justify-center bg-[#1A103D] rounded-md ${padding}`}>
                 <div className='absolute top-0 left-0 p-2'>
-                    <button className='text-white text-[4.5vmin] back-button' onClick={() => goBack()}><IoArrowBack /></button>
+                    <button className='text-white text-[4.5vmin] back-button' onClick={goBack}><IoArrowBack /></button>
                 </div>
                 <Routes>
                     <Route path="/" element={<ExploreContent />} />
