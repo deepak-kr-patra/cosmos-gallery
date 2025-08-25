@@ -33,20 +33,9 @@ const Home = () => {
         <div className='text-white w-full h-screen flex flex-col items-center justify-center'>
             <div className="w-full relative flex items-center justify-center overflow-hidden">
                 <h1 className='text-[6vmin]'>
-                    <span className="alphabet">C</span>
-                    <span className="alphabet">O</span>
-                    <span className="alphabet">S</span>
-                    <span className="alphabet">M</span>
-                    <span className="alphabet">O</span>
-                    <span className="alphabet">S</span>
-                    <span className="alphabet"> </span>
-                    <span className="alphabet">G</span>
-                    <span className="alphabet">A</span>
-                    <span className="alphabet">L</span>
-                    <span className="alphabet">L</span>
-                    <span className="alphabet">E</span>
-                    <span className="alphabet">R</span>
-                    <span className="alphabet">Y</span>
+                    {"COSMOS GALLERY".split('').map((ch, idx) =>
+                        <span key={idx} className='alphabet' style={{ transitionDelay: `${1200 + 50 * idx}ms` }}>{ch}</span>
+                    )}
                 </h1>
                 <img src="/rocket.png" alt="rocket image" className='absolute rocket-image' />
             </div>
