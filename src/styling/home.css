@@ -1,6 +1,9 @@
 .rocket-image {
     height: 6vmin;
     left: 100vw;
+}
+
+.fly-rocket {
     animation: flyin 3s linear;
 }
 

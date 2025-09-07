@@ -6,6 +6,15 @@ import { Link } from 'react-router-dom';
 const Home = () => {
 
     useEffect(() => {
+        const checkVisibility = () => {
+            if (document.visibilityState === "visible") {
+                document.querySelector(".rocket-image").classList.add('fly-rocket');
+            }
+        };
+
+        document.addEventListener("visibilitychange", checkVisibility);
+        checkVisibility();
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
@@ -27,6 +36,8 @@ const Home = () => {
 
         const hiddenItems = document.querySelectorAll('.intro-n-btn');
         hiddenItems.forEach((el) => observer2.observe(el));
+
+        return () => document.removeEventListener('visibilitychange', checkVisibility);
     }, []);
 
     return (
