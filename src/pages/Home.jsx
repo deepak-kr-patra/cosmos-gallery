@@ -41,7 +41,7 @@ const Home = () => {
     }, []);
 
     return (
-        <div className='text-white w-full h-screen flex flex-col items-center justify-center'>
+        <div className='text-white w-full h-full flex flex-col items-center justify-center'>
             <div className="w-full relative flex items-center justify-center overflow-hidden">
                 <h1 className='text-[6vmin]'>
                     {"COSMOS GALLERY".split('').map((ch, idx) =>
