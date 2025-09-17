@@ -6,36 +6,40 @@ import { Link } from 'react-router-dom';
 const Home = () => {
 
     useEffect(() => {
+        let initialized = false;
+
         const checkVisibility = () => {
-            if (document.visibilityState === "visible") {
+            if (document.visibilityState === "visible" && !initialized) {
+                initialized = true;
+
                 document.querySelector(".rocket-image").classList.add('fly-rocket');
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('showAlphabet');
+                        }
+                    });
+                });
+
+                const hiddenAlpha = document.querySelectorAll('.alphabet');
+                hiddenAlpha.forEach((el) => observer.observe(el));
+
+                const observer2 = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('show-intro-n-btn');
+                        }
+                    });
+                });
+
+                const hiddenItems = document.querySelectorAll('.intro-n-btn');
+                hiddenItems.forEach((el) => observer2.observe(el));
             }
         };
 
         document.addEventListener("visibilitychange", checkVisibility);
         checkVisibility();
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('showAlphabet');
-                }
-            });
-        });
-
-        const hiddenAlpha = document.querySelectorAll('.alphabet');
-        hiddenAlpha.forEach((el) => observer.observe(el));
-
-        const observer2 = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show-intro-n-btn');
-                }
-            });
-        });
-
-        const hiddenItems = document.querySelectorAll('.intro-n-btn');
-        hiddenItems.forEach((el) => observer2.observe(el));
 
         return () => document.removeEventListener('visibilitychange', checkVisibility);
     }, []);
